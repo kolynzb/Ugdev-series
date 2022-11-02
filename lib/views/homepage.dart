@@ -53,37 +53,41 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
-                  onTap: () {
-                    setState(() => pageIndex = 1);
-                  },
-                  child: const Icon(
-                    Icons.account_tree,
-                    color: Colors.white,
-                  )),
+                onTap: () {
+                  setState(() => pageIndex = 0);
+                },
+                child: const Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+              ),
               GestureDetector(
-                  onTap: () {
-                    setState(() => pageIndex = 0);
-                  },
-                  child: const Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  )),
+                onTap: () {
+                  setState(() => pageIndex = 1);
+                },
+                child: const Icon(
+                  Icons.account_tree,
+                  color: Colors.white,
+                ),
+              ),
               GestureDetector(
-                  onTap: () {
-                    setState(() => pageIndex = 2);
-                  },
-                  child: const Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                  )),
+                onTap: () {
+                  setState(() => pageIndex = 3);
+                },
+                child: const Icon(
+                  Icons.notifications,
+                  color: Colors.white,
+                ),
+              ),
               GestureDetector(
-                  onTap: () {
-                    setState(() => pageIndex = 3);
-                  },
-                  child: const Icon(
-                    Icons.notifications,
-                    color: Colors.white,
-                  ))
+                onTap: () {
+                  setState(() => pageIndex = 2);
+                },
+                child: const Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ),
