@@ -9,12 +9,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int pageindex = 0;
-  var pages = [FirstPage(), Secondpg(), ThirdPage(), FourthPage()];
+  int? pageIndex;
+  var pages = const [FirstPage(), Secondpg(), ThirdPage(), FourthPage()];
+
+  void getUserIndex() {
+    setState(() => pageIndex = 0);
+  }
 
   @override
   void initState() {
     super.initState();
+    getUserIndex();
   }
 
   @override
@@ -24,13 +29,23 @@ class _HomePageState extends State<HomePage> {
 
     return SafeArea(
       child: Scaffold(
-        body: pages[pageindex],
+        body: pages[pageIndex!],
         bottomNavigationBar: Container(
           padding: const EdgeInsets.all(10),
           margin: EdgeInsets.only(bottom: height * .02),
           height: 70,
           decoration: BoxDecoration(
-            color: Colors.black,
+            gradient: const LinearGradient(
+              colors: [
+                const Color(0xFF3366FF),
+                const Color(0xFF00CCFF),
+                const Color(0xFF3366FF),
+              ],
+              begin: const FractionalOffset(0.0, 0.0),
+              end: const FractionalOffset(1.0, 0.0),
+              stops: [0.0, 1.0, 0.0],
+              tileMode: TileMode.clamp,
+            ),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
@@ -38,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               GestureDetector(
                   onTap: () {
-                    setState(() => pageindex = 1);
+                    setState(() => pageIndex = 1);
                   },
                   child: const Icon(
                     Icons.account_tree,
@@ -46,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                   )),
               GestureDetector(
                   onTap: () {
-                    setState(() => pageindex = 0);
+                    setState(() => pageIndex = 0);
                   },
                   child: const Icon(
                     Icons.home,
@@ -54,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                   )),
               GestureDetector(
                   onTap: () {
-                    setState(() => pageindex = 2);
+                    setState(() => pageIndex = 2);
                   },
                   child: const Icon(
                     Icons.settings,
@@ -62,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                   )),
               GestureDetector(
                   onTap: () {
-                    setState(() => pageindex = 3);
+                    setState(() => pageIndex = 3);
                   },
                   child: const Icon(
                     Icons.notifications,
