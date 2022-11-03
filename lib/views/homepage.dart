@@ -52,30 +52,34 @@ class _HomePageState extends State<HomePage> {
             children: [
               GestureDetector(
                 onTap: () => setState(() => pageIndex = 0),
-                child: const Icon(
+                child: Icon(
                   Icons.home,
-                  color: Colors.white,
+                  color: pageIndex == 0 ? Colors.greenAccent : Colors.white,
+                  size: pageIndex == 0 ? 30 :20,
                 ),
               ),
               GestureDetector(
                 onTap: () => setState(() => pageIndex = 1),
-                child: const Icon(
+                child: Icon(
                   Icons.account_tree,
-                  color: Colors.white,
-                ),
-              ),
-              GestureDetector(
-                onTap: () => setState(() => pageIndex = 3),
-                child: const Icon(
-                  Icons.notifications,
-                  color: Colors.white,
+                  color: pageIndex == 1 ? Colors.greenAccent : Colors.white,
+                  size: pageIndex == 1 ? 30 : 20,
                 ),
               ),
               GestureDetector(
                 onTap: () => setState(() => pageIndex = 2),
-                child: const Icon(
+                child: Icon(
+                  Icons.notifications,
+                  color: pageIndex == 2 ? Colors.greenAccent : Colors.white,
+                  size: pageIndex == 2 ? 30 : 20,
+                ),
+              ),
+              GestureDetector(
+                onTap: () => setState(() => pageIndex = 3),
+                child: Icon(
                   Icons.settings,
-                  color: Colors.white,
+                  color: pageIndex == 3 ? Colors.greenAccent : Colors.white,
+                  size: pageIndex == 3 ? 30 : 20,
                 ),
               ),
             ],
