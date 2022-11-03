@@ -11,9 +11,12 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
+  bool? listOrList;
+
   @override
   void initState() {
     super.initState();
+    listOrList = false;
   }
 
   @override
@@ -41,20 +44,56 @@ class _FirstPageState extends State<FirstPage> {
                 ),
               ),
               SizedBox(
-                height: height * .75,
-                child: ListView.builder(
-                  itemCount: 9,
-                  itemBuilder: (BuildContext, int) {
-                    return ListTile(
-                      leading: const CircleAvatar(
-                          backgroundColor: Colors.red, radius: 25),
-                      title: Text("I am Rated Number $int"),
-                      subtitle: Text("Hey hire your Number $int"),
-                      trailing:
-                          const Icon(Icons.mark_chat_read, color: Colors.black),
-                    );
-                  },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    SizedBox(
+                      child: listOrList!
+                          ? IconButton(
+                              onPressed: () => setState(() {
+                                listOrList = !listOrList!;
+                              }),
+                              icon: const Icon(Icons.grid_on),
+                            )
+                          : IconButton(
+                              onPressed: () => setState(() {
+                                listOrList = !listOrList!;
+                              }),
+                              icon: const Icon(Icons.list),
+                            ),
+                    ),
+                  ],
                 ),
+              ),
+              SizedBox(
+                height: height * .74,
+                child: listOrList!
+                    ? GridView.builder(
+                        itemCount: 9,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 5,
+                          mainAxisExtent: 5,
+                          crossAxisSpacing: 3,
+                        ),
+                        itemBuilder: (BuildContext, i) {
+                          return Center(
+                            child: Text('$i'),
+                          );
+                        })
+                    : ListView.builder(
+                        itemCount: 9,
+                        itemBuilder: (BuildContext, int) {
+                          return ListTile(
+                            leading: const CircleAvatar(
+                                backgroundColor: Colors.red, radius: 25),
+                            title: Text("I am Rated Number $int"),
+                            subtitle: Text("Hey hire your Number $int"),
+                            trailing: const Icon(Icons.mark_chat_read,
+                                color: Colors.black),
+                          );
+                        },
+                      ),
               )
             ],
           ))),
