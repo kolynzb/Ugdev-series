@@ -87,7 +87,12 @@ class _FirstPageState extends State<FirstPage> {
                               ),
                             ),
                             child: Center(
-                              child: Text('$i'),
+                              child: Text(
+                                '$i',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
                           );
                         })

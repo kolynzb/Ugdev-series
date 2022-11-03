@@ -9,6 +9,7 @@
 - [Flutter SetUp Mac](https://youtu.be/JJwBoRMY08U)
 - [Flutter SetUp windows](https://youtu.be/tun0HUHaDuE)
 - [Flutter Setup Linux](https://youtu.be/Esb7zwEIHv8)
+- [Top 15 flutter Extentions](https://www.syncfusion.com/blogs/post/10-best-visual-studio-code-extensions-for-flutter-development.aspx)
 
 # Best Flutter Youtube Channels
 
