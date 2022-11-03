@@ -70,15 +70,20 @@ class _FirstPageState extends State<FirstPage> {
                 child: listOrList!
                     ? GridView.builder(
                         itemCount: 9,
+                        shrinkWrap: true,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 5,
-                          mainAxisExtent: 5,
-                          crossAxisSpacing: 3,
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 20,
+                          crossAxisSpacing: 10,
                         ),
                         itemBuilder: (BuildContext, i) {
-                          return Center(
-                            child: Text('$i'),
+                          return Container(
+                            height: 100,
+                            color: Colors.red,
+                            child: Center(
+                              child: Text('$i'),
+                            ),
                           );
                         })
                     : ListView.builder(
