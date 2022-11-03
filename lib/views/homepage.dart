@@ -12,9 +12,7 @@ class _HomePageState extends State<HomePage> {
   int? pageIndex;
   var pages = const [FirstPage(), Secondpg(), ThirdPage(), FourthPage()];
 
-  void getUserIndex() {
-    setState(() => pageIndex = 0);
-  }
+  void getUserIndex() => setState(() => pageIndex = 0);
 
   @override
   void initState() {
