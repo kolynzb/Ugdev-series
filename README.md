@@ -4,7 +4,7 @@
 
 # Useful Links For Beginners
 
-- [https://www.youtube.com/c/flutterdev](Official Flutter Youtube Channel)
+- [Official Flutter Youtube Channel](https://www.youtube.com/c/flutterdev)
 - [Widget of the Week Playlist](https://www.youtube.com/watch?v=XawP1i314WM&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG)
 - [Flutter SetUp Mac](https://youtu.be/JJwBoRMY08U)
 - [Flutter SetUp windows](https://youtu.be/tun0HUHaDuE)
@@ -13,10 +13,10 @@
 
 # Best Flutter Youtube Channels
 
-- [https://www.youtube.com/c/flutterdev](Official Flutter Youtube Channel)
+- [Official Flutter Youtube Channel](https://www.youtube.com/c/flutterdev)
 
 # UI Design inspiration
 
 - [Dribble](https://dribbble.com/search/mobile-app)
 - [Behance](https://www.behance.net/search/prototypes?search=mobile+app+ui/ux)
-- [Pintrest]()
+- [Pintrest](https://ar.pinterest.com/search/pins/?q=mobile%20design&rs=typed)
