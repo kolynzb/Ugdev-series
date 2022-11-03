@@ -80,7 +80,12 @@ class _FirstPageState extends State<FirstPage> {
                         itemBuilder: (BuildContext, i) {
                           return Container(
                             height: 100,
-                            color: Colors.red,
+                            decoration: const BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(15),
+                              ),
+                            ),
                             child: Center(
                               child: Text('$i'),
                             ),
