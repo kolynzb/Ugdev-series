@@ -2,6 +2,10 @@
 
 - Ug dev is a 3 day flutter series.
 
+# Project Resources
+
+- [UI/UX design](https://www.figma.com/file/WQn3YNXDfnZynVsg9dPear/UG-dev?node-id=0%3A1)
+
 # Useful Links For Beginners
 
 - [Official Flutter Youtube Channel](https://www.youtube.com/c/flutterdev)
